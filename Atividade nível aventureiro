@@ -1,0 +1,163 @@
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+
+
+
+
+//Carta 01
+
+    char estado_1 [50];
+    char codigo_1[10];
+    char cidade_1 [50];
+    int populacao_1; 
+    int turistas_1;
+    float area_1, pib_1, densidade_1, pib_per_capita_1;
+
+//Carta 02
+
+    char estado_2 [50];
+    char codigo_2[10];
+    char cidade_2 [50];
+    int populacao_2; 
+    int turistas_2;
+    float area_2, pib_2, densidade_2, pib_per_capita_2;
+
+
+    
+
+    #define LIMPAR_BUFFER() (void)getchar();
+
+printf("Digite as informações da primera carta:\n");
+
+printf("Qual seu estado de (A-H)? ");
+scanf("%s", &estado_1);
+LIMPAR_BUFFER ();
+
+printf("Qual o seu código? ");
+scanf("%s", codigo_1);
+LIMPAR_BUFFER ();
+
+
+printf("Qual a sua cidade? ");
+scanf("%[^\n]s", cidade_1); 
+LIMPAR_BUFFER ();
+
+printf("Qual a população? ");
+scanf("%d", &populacao_1);
+LIMPAR_BUFFER ();
+
+
+printf("Qual a aréa em km²? ");
+scanf("%f", &area_1);
+LIMPAR_BUFFER ();
+
+printf("Qual o PIB? ");
+scanf("%f", &pib_1);
+LIMPAR_BUFFER ();
+
+printf("Pontos turísticos? ");
+scanf("%d", &turistas_1);
+LIMPAR_BUFFER ();
+
+
+
+printf("Digite as informações da segunda carta:\n");
+
+printf("Qual seu estado de (A-H)? ");
+scanf("%s", &estado_2);
+LIMPAR_BUFFER ();
+
+ 
+
+printf("Qual o seu código? ");
+scanf("%s", codigo_2);
+LIMPAR_BUFFER ();
+
+
+printf("Qual a sua cidade? ");
+scanf(" %[^\n]s", cidade_2); 
+LIMPAR_BUFFER ();
+
+printf("Qual a população? ");
+scanf("%d", &populacao_2);
+LIMPAR_BUFFER ();
+
+
+printf("Qual a aréa em km²? ");
+scanf("%f", &area_2);
+LIMPAR_BUFFER (); 
+
+printf("Qual o PIB? ");
+scanf("%f", &pib_2);
+LIMPAR_BUFFER ();
+ 
+
+printf("Pontos turísticos? ");
+scanf("%d", &turistas_2);
+LIMPAR_BUFFER ();
+ 
+
+
+
+printf ("Jogadores vejam os seus resultados inseridos:\n");
+printf ("Estado: %s\n",estado_1);
+printf ("Código: %s\n", codigo_1);
+printf ("Cidade: %s\n", cidade_1);
+printf ("População: %d\n", populacao_1);
+printf ("Aréa em km²: %2.f\n", area_1);
+printf ("PIB: %f\n", pib_1);
+printf ("Quantidade de Pontos turísticos: %d\n", turistas_1); 
+
+printf ("Jogadores, vejam os seus resultados inseridos:\n");
+printf ("Estado: %s\n",estado_2);
+printf ("Código: %s\n", codigo_2);
+printf ("Cidade: %s\n", cidade_2);
+printf ("População: %d\n", populacao_2);
+printf ("Aréa em km²: %2.f\n", area_2);
+printf ("PIB: %f\n", pib_2);
+printf ("Quantidade de Pontos turísticos: %d\n", turistas_2); 
+
+
+
+  
+printf("\nDados da Carta 1:\n");
+    printf("Estado: %s\nCódigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f\nPontos turísticos: %d\n",
+           estado_1, codigo_1, cidade_1, populacao_1, area_1, pib_1, turistas_1);
+    printf("Densidade Populacional: %.2f hab/km²\nPIB per capita: %.2f\n", densidade_1, pib_per_capita_1);
+
+    printf("\nDados da Carta 2:\n");
+    printf("Estado: %s\nCódigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f\nPontos turísticos: %d\n",
+           estado_2, codigo_2, cidade_2, populacao_2, area_2, pib_2, turistas_2);
+    printf("Densidade Populacional: %.2f hab/km²\nPIB per capita: %.2f\n", densidade_2, pib_per_capita_2);
+
+    // Lógica de comparação atributo população
+    printf("\nComparação de cartas (Atributo: População):\n");
+    printf("Carta 1 - %s (%s): %d\n", cidade_1, estado_1, populacao_1);
+    printf("Carta 2 - %s (%s): %d\n", cidade_2, estado_2, populacao_2);
+
+    if (populacao_1 > populacao_2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade_1);
+    } else if (populacao_2 > populacao_1) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade_2);
+    } else {
+        printf("Resultado: Empate!\n");
+    }
+
+
+
+
+  return 0;
+ 
+
+
+
+
+
+
+
+
+
+
+}
